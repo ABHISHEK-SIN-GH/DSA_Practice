@@ -1,5 +1,3 @@
-// https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/
-
 #include <bits/stdc++.h>
 using namespace std;
 
