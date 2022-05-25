@@ -19,13 +19,15 @@ int main(){
 string s = "aba";
 string longPalidrome = "";
 int longPalidromeLen = 0;
+
 if(s.size()==1){
     cout<<s;
     return 0;
-} 
+}
+
 for (int i = 0; i < s.size(); i++)
 {
-    for (int j = 1; j < s.size(); j++)
+    for (int j = 1; j <= s.size(); j++)
     {
         string currWord = s.substr(i,j);
         int currLen = currWord.size();
@@ -38,6 +40,7 @@ for (int i = 0; i < s.size(); i++)
         }
     }
 }
+
 cout<<longPalidrome;
 return 0;
 }
