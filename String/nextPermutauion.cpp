@@ -1,22 +1,23 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-void reverse(vector<int> arr, int start)
+void reverse(int arr[], int start, int end)
 {
     int i = start;
-    int j = arr.size() - 1;
+    int j = end - 1;
     while (i <= j)
     {
-        swap(arr[i], arr[j]);
+        swap(arr[i],arr[j]);
         i++;
         j--;
     }
 }
 
-vector<int> nextPermutation(int N, vector<int> arr)
+int main()
 {
-    // code
-    int i = N - 2;
+    int arr[] = {3, 1, 2};
+    int n = 3;
+    int i = n - 2;
 
     while (i >= 0 && arr[i + 1] <= arr[i])
     {
@@ -30,27 +31,16 @@ vector<int> nextPermutation(int N, vector<int> arr)
         j++;
     }
 
-    swap(arr[i], arr[--j]);
+    cout<<i<<" "<<j<<endl;
 
-    reverse(arr, i + 1);
+    swap(arr[i], arr[j]);
 
-    for (int i = 0; i < arr.size(); i++)
+    reverse(arr, i + 1, n);
+
+    for (int i = 0; i < n; i++)
     {
-        cout<<arr[i]<<" ";
+        cout << arr[i] << " ";
     }
 
-    return arr;
-}
-
-int main(){
-int N = 6;
-vector<int> NN;
-NN.push_back(1);
-NN.push_back(4);
-NN.push_back(6);
-NN.push_back(5);
-NN.push_back(2);
-NN.push_back(3);
-nextPermutation(N,NN);
-return 0;
+    return 0;
 }
