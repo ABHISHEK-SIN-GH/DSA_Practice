@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-string s = "abc";
+string s = "abcd";
 unordered_set<string> ss;
 for (int i = 0; i < s.size(); i++)
 {
